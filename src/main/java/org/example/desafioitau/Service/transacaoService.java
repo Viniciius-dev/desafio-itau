@@ -17,12 +17,11 @@ import java.util.List;
 public class transacaoService {
 
 
-    private final DeleteController  deleteController;
     private final transacaoRepository transacaoRepository;
 
 
-    public transacaoService(DeleteController deleteController, transacaoRepository transacaoRepository) {
-        this.deleteController = deleteController;
+    public transacaoService(transacaoRepository transacaoRepository) {
+
         this.transacaoRepository = transacaoRepository;
     }
 

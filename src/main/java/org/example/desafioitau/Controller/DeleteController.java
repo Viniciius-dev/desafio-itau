@@ -13,11 +13,12 @@ public class DeleteController {
     @Autowired
     private transacaoService transacaoService;
 
-    @Autowired
-    private transacaoRepository transacaoRepository;
+    private final transacaoRepository transacaoRepository;
+
     private final transacaoController transacaoController;
 
-    public DeleteController(transacaoController transacaoController) {
+    public DeleteController(transacaoRepository transacaoRepository, transacaoController transacaoController) {
+        this.transacaoRepository = transacaoRepository;
         this.transacaoController = transacaoController;
     }
 
